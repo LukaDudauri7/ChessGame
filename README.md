@@ -1,3 +1,3 @@
 # ChessGame
 Live Demo
-# https://lukadudauri7.github.io/ChessGame/
+# [🔗 Quadratic Equation Solver ](https://lukadudauri7.github.io/ChessGame/)
