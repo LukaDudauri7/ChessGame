@@ -1,0 +1,62 @@
+ .board {
+     width: 90px;
+     height: 90px;
+     border: 2px solid black;
+     background-color: #996633;
+ }
+ 
+ body {
+     background-color: white;
+     text-align: center;
+     margin-top: 65px;
+ }
+ 
+ .black {
+     width: 90px;
+     height: 90px;
+     border: 1.25px solid black;
+     background-color: #1d4c79;
+ }
+ 
+ .white {
+     width: 90px;
+     height: 90px;
+     border: 1.25px solid black;
+     background-color: #eae9d2;
+ }
+ 
+ img {
+     margin-top: 12.5%;
+     text-align: center;
+ }
+ 
+ th {
+     background-color: #eae9d2;
+     padding: 5px;
+     font-size: 17.5px;
+     text-align: center;
+     margin: 10px;
+ }
+ 
+ td {
+     font-size: 70px;
+     text-align: center;
+     border: 2px solid black;
+     text-align: center;
+ }
+ 
+ tr {
+     background-color: #eae9d2;
+     padding: 50px;
+     font-size: 17.5px;
+     text-align: center;
+     margin: 10px;
+ }
+ 
+ newtr {
+     background-color: #eae9d2;
+     padding: 5px;
+     font-size: 17.5px;
+     text-align: center;
+     margin-top: 52%;
+ }
