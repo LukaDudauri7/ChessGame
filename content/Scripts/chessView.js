@@ -17,11 +17,23 @@ for (var row = 1; row <= 8; row++) {
 
     }
     board.appendChild(createTr);
-    var borderTh = document.createElement('th');
-    borderTh.innerHTML = row;
-    createTr.appendChild(borderTh);
-    board.appendChild(createTr);
+    // var borderTh = document.createElement('th');
+    // borderTh.innerHTML = row;
+    // console.log(borderTh);
+    // createTr.appendChild(borderTh);
+    // board.appendChild(createTr);
 }
+
+var parentNumbersDiv = document.createElement("div");
+parentNumbersDiv.className = "parentDiv"
+for(let i = 1; i <= 8; i++){
+    var div = document.createElement("div");
+    div.textContent = i;
+    div.className = 'div_bg'
+    parentNumbersDiv.appendChild(div)
+}
+
+document.body.appendChild(parentNumbersDiv)
 document.body.appendChild(board);
 
 for (var column = 97; column <= 104; column++) {

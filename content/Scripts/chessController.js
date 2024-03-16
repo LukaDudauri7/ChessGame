@@ -161,12 +161,6 @@ $(document).ready(function() {
             document.getElementById(id).append(activeElement);
             prev = null;
             moveDone = true;
-            // console.log(this.turn)
-            // if (this.turn == "white")
-            //     this.turn = "black";
-            // else
-            //     this.turn = "white";
-            //     return;
         }
     });
 });
