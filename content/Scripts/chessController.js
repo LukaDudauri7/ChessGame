@@ -113,6 +113,14 @@ var moveDone = true;
 $(document).ready(function() {
     $("td").click(function() {
         var id = this.id;
+        if(document.getElementById(id).querySelector('img')){
+            let clickedFigureSrc = document.getElementById(id).querySelector('img').src
+            let figureColor;
+            if(clickedFigureSrc.includes('white')) figureColor = 'white'
+            else figureColor = 'black'
+            console.log(figureColor);
+        }
+        
         x = id.substring(1);
         y = id.charCodeAt(0) - 96;
         resetColor();
@@ -121,14 +129,14 @@ $(document).ready(function() {
             prevY = y;
             prev = chessBoard.board[x][y];
             prevId = id;
-            if (chessBoard.board[x][y] == null)
-                return;
+            if (chessBoard.board[x][y] == null) return;
             var lightId = chessBoard.board[x][y].check();
             for (var newId = 0; newId < lightId.length; newId++) {
                 var number = parseInt(lightId[newId][1]);
                 var charIndex = String.fromCharCode(number + 96);
                 var pieceId = charIndex + lightId[newId][0];
-                document.getElementById(pieceId).style.backgroundColor = "#00a3cc";
+                // document.getElementById(pieceId).style.backgroundColor = "#00a3cc";
+                document.getElementById(pieceId).style.backgroundColor = "rgb(0, 163, 204)";
             }
             moveDone = false;
         } else {
