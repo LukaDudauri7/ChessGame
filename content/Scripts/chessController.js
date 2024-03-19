@@ -81,8 +81,7 @@ $(document).ready(function() {
             var lightId = chessBoard.board[x][y].check();
             for (var newId = 0; newId < lightId.length; newId++) {
                 var number = parseInt(lightId[newId][1]);
-                var charIndex = String.fromCharCode(number + 96);
-                var pieceId = charIndex + lightId[newId][0];
+                var pieceId = String.fromCharCode(number + 96) + lightId[newId][0];
                 document.getElementById(pieceId).style.backgroundColor = "#00a3cc";
             }
             moveDone = false;
@@ -100,6 +99,7 @@ $(document).ready(function() {
                 moveDone = true;
                 return;
             }
+            moved = true;
             var pieceId = String.fromCharCode(parseInt(y) + 96) + x;
             prev.row = parseInt(x);
             prev.column = parseInt(y);
