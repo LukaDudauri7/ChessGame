@@ -50,9 +50,8 @@ function resetColor() {
     }
 }
 
-//new logic
-// Iterate through each <td> element and attach event listener
 // let tdElement = document.querySelectorAll('td');
+// Iterate through each <td> element and attach event listener
 // tdElement.forEach(td => {
 //     td.addEventListener("click", function() {
 //         let imageSrc = td.innerHTML;

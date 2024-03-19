@@ -32,6 +32,7 @@ body {
 img {
     margin-top: 12.5%;
     text-align: center;
+    cursor: pointer;
 }
 
 th {
@@ -55,15 +56,6 @@ tr {
     text-align: center;
     margin: 10px;
 }
-
-newtr {
-    background-color: #eae9d2;
-    padding: 5px;
-    font-size: 17.5px;
-    text-align: center;
-    margin-top: 52%;
-}
-
 .parentDiv {
    display: flex;
    justify-content: space-around;
