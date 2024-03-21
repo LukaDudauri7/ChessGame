@@ -99,7 +99,10 @@ $(document).ready(function() {
                 moveDone = true;
                 return;
             }
-            moved = true;
+            else{
+                moved = true;
+                console.log('moved');
+            }
             var pieceId = String.fromCharCode(parseInt(y) + 96) + x;
             prev.row = parseInt(x);
             prev.column = parseInt(y);
@@ -112,5 +115,27 @@ $(document).ready(function() {
             prev = null;
             moveDone = true;
         }
+    });
+    $('#black-button').on( "click", function() {
+        $('.game-content').css('display', 'flex');
+        $('.container').css('display', 'none');
+
+        // $('td img').each(function() {
+        //     var src = $(this).attr('src');
+        //     if (src && src.includes('white')) {
+        //       $(this).closest('td').addClass('disabled');
+        //     }
+        // });
+    });
+    $('#white-button').on( "click", function() {
+        $('.game-content').css('display', 'flex');
+        $('.container').css('display', 'none');
+
+        // $('td img').each(function() {
+        //     var src = $(this).attr('src');
+        //     if (src && src.includes('black')) {
+        //       $(this).closest('td').addClass('disabled');
+        //     }
+        // });
     });
 });

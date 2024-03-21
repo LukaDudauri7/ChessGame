@@ -7,10 +7,26 @@
 </head>
 
 <body>
+    <div class="game-content"></div>
+    <div class="container">
+        <h1>Welcome to Chess Game</h1>
+        <p class="subheading">Choose your color:</p>
+        <div class="color-selection">
+          <button id="black-button">
+            <span class="color-text">Play as Black</span>
+            <div class="color-icon black"></div>
+          </button>
+          <button id="white-button">
+            <span class="color-text">Play as White</span>
+            <div class="color-icon white"></div>
+          </button>
+        </div>
+      </div>
+    <link rel="stylesheet" href="content/Style/popup.css">
     <link rel="stylesheet" href="content/Style/style.css">
-        <table id="chessboard"></table>
 </body>
 <script src="content/Scripts/chessModel.js"></script>
 <script src="content/Scripts/chessController.js"></script>
 <script src="content/Scripts/chessView.js"></script>
+
 </html>

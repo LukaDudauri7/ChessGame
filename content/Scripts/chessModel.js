@@ -27,8 +27,7 @@ class Figure {
             else if (colorFlag == 2) {
                 rowPosition.push([newRow, this.column]);
                 break;
-            } else
-                break;
+            } else break;
         }
 
         for (var newRow = this.row + 1; newRow <= 8; newRow++) {
@@ -38,8 +37,7 @@ class Figure {
             else if (colorFlag == 2) {
                 rowPosition.push([newRow, this.column]);
                 break;
-            } else
-                break;
+            } else break;
         }
         return rowPosition;
     }
@@ -53,8 +51,7 @@ class Figure {
             else if (colorFlag == 2) {
                 columnPosition.push([this.row, newColumn]);
                 break;
-            } else
-                break;
+            } else break;
         }
 
         for (var newColumn = this.column + 1; newColumn <= 8; newColumn++) {
@@ -64,8 +61,7 @@ class Figure {
             else if (colorFlag == 2) {
                 columnPosition.push([this.row, newColumn]);
                 break;
-            } else
-                break;
+            } else break;
         }
         return columnPosition;
 
@@ -80,8 +76,7 @@ class Figure {
             else if (colorFlag == 2) {
                 diagonalPosition.push([newRow, newColumn]);
                 break;
-            } else
-                break;
+            } else break;
         }
 
         for (var newRow = this.row - 1, newColumn = this.column + 1; newRow >= 1, newColumn <= 8; newRow--, newColumn++) {
@@ -91,8 +86,7 @@ class Figure {
             else if (colorFlag == 2) {
                 diagonalPosition.push([newRow, newColumn]);
                 break;
-            } else
-                break;
+            } else break;
         }
 
         for (var newRow = this.row + 1, newColumn = this.column - 1; newRow <= 8, newColumn >= 1; newRow++, newColumn--) {
@@ -102,8 +96,7 @@ class Figure {
             else if (colorFlag == 2) {
                 diagonalPosition.push([newRow, newColumn]);
                 break;
-            } else
-                break;
+            } else break;
         }
 
         for (var newRow = this.row - 1, newColumn = this.column - 1; newRow >= 1, newColumn >= 1; newRow--, newColumn--) {
@@ -113,8 +106,7 @@ class Figure {
             else if (colorFlag == 2) {
                 diagonalPosition.push([newRow, newColumn]);
                 break;
-            } else
-                break;
+            } else break;
         }
         return diagonalPosition;
     }
@@ -133,65 +125,53 @@ class Pawn extends Figure {
         if (this.color == "white" && this.row == 7)
             for (newRow = this.row - 1; newRow >= this.row - 2; newRow--) {
                 var colorFlag = this.positionFree(chessBoard, newRow, this.column);
-                if (colorFlag == 1)
-                    possibleMoves.push([newRow, this.column]);
+                if (colorFlag == 1) possibleMoves.push([newRow, this.column]);
             }
 
         if (this.color == "black" && this.row == 2)
             for (newRow = this.row + 1; newRow <= this.row + 2; newRow++) {
                 var colorFlag = this.positionFree(chessBoard, newRow, this.column);
-                if (colorFlag == 1)
-                    possibleMoves.push([newRow, this.column]);;
+                if (colorFlag == 1) possibleMoves.push([newRow, this.column]);;
             }
 
         if (this.color == "white" && this.row != 7)
             for (newRow = this.row - 1; newRow > this.row - 2; newRow--) {
                 var colorFlag = this.positionFree(chessBoard, newRow, this.column);
-                if (colorFlag == 1)
-                    possibleMoves.push([newRow, this.column]);
+                if (colorFlag == 1) possibleMoves.push([newRow, this.column]);
             }
 
         if (this.color == "black" && this.row != 2)
             for (newRow = this.row + 1; newRow < this.row + 2; newRow++) {
                 var colorFlag = this.positionFree(chessBoard, newRow, this.column);
-                if (colorFlag == 1)
-                    possibleMoves.push([newRow, this.column]);
+                if (colorFlag == 1) possibleMoves.push([newRow, this.column]);
             }
 
         if (this.color == "black") {
             var newRow = this.row + 1;
             var newColumn = this.column + 1;
             var colorFlag = this.positionFree(chessBoard, newRow, newColumn);
-            if (colorFlag == 2 && chessBoard.board[x][y] != null) {
-                possibleMoves.push([newRow, newColumn]);
-            }
+            if (colorFlag == 2 && chessBoard.board[x][y] != null) possibleMoves.push([newRow, newColumn]);
         }
 
         if (this.color == "black") {
             var newRow = this.row + 1;
             var newColumn = this.column - 1;
             var colorFlag = this.positionFree(chessBoard, newRow, newColumn);
-            if (colorFlag == 2 && chessBoard.board[x][y] != null) {
-                possibleMoves.push([newRow, newColumn]);
-            }
+            if (colorFlag == 2 && chessBoard.board[x][y] != null) possibleMoves.push([newRow, newColumn]);
         }
 
         if (this.color == "white") {
             var newRow = this.row - 1;
             var newColumn = this.column + 1;
             var colorFlag = this.positionFree(chessBoard, newRow, newColumn);
-            if (colorFlag == 2 && chessBoard.board[x][y] != null) {
-                possibleMoves.push([newRow, newColumn]);
-            }
+            if (colorFlag == 2 && chessBoard.board[x][y] != null) possibleMoves.push([newRow, newColumn]);
         }
 
         if (this.color == "white") {
             var newRow = this.row - 1;
             var newColumn = this.column - 1;
             var colorFlag = this.positionFree(chessBoard, newRow, newColumn);
-            if (colorFlag == 2 && chessBoard.board[x][y] != null) {
-                possibleMoves.push([newRow, newColumn]);
-            }
+            if (colorFlag == 2 && chessBoard.board[x][y] != null) possibleMoves.push([newRow, newColumn]);
         }
         return possibleMoves;
     }
@@ -241,7 +221,6 @@ class Knight extends Figure {
     }
 }
 
-
 class Queen extends Figure {
     constructor(row, column, color) {
         super(row, column, color);
@@ -278,8 +257,7 @@ class King extends Figure {
             newRow = this.row + this.possibleDirection[index][0];
             newColumn = this.column + this.possibleDirection[index][1];
             var colorFlag = this.positionFree(chessBoard, newRow, newColumn);
-            if (colorFlag == 1 || colorFlag == 2)
-                possibleMoves.push([newRow, newColumn]);
+            if (colorFlag == 1 || colorFlag == 2) possibleMoves.push([newRow, newColumn]);
         }
         return possibleMoves;
     }

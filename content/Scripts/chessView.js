@@ -29,8 +29,12 @@ for(let i = 1; i <= 8; i++){
     parentNumbersDiv.appendChild(div)
 }
 
-document.body.appendChild(parentNumbersDiv)
-document.body.appendChild(board);
+// document.body.appendChild(parentNumbersDiv)
+// document.body.appendChild(board);
+
+document.querySelector(".game-content").appendChild(parentNumbersDiv);
+document.querySelector(".game-content").appendChild(board);
+
 
 for (var column = 97; column <= 104; column++) {
     var newTr = document.createElement('th');
