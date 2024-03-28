@@ -31,7 +31,6 @@ for(let i = 1; i <= 8; i++){
 
 // document.body.appendChild(parentNumbersDiv)
 // document.body.appendChild(board);
-
 document.querySelector(".game-content").appendChild(parentNumbersDiv);
 document.querySelector(".game-content").appendChild(board);
 
@@ -55,7 +54,7 @@ function resetColor() {
 }
 
 // let tdElement = document.querySelectorAll('td');
-// Iterate through each <td> element and attach event listener
+// // Iterate through each <td> element and attach event listener
 // tdElement.forEach(td => {
 //     td.addEventListener("click", function() {
 //         let imageSrc = td.innerHTML;

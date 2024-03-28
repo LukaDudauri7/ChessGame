@@ -66,7 +66,7 @@ var prevY;
 var changeTurn = true;
 var prevId;
 var moveDone = true;
-let moved = false;
+let figureMoved = false;
 $(document).ready(function() {
     $("td").click(function() {
         x = this.id.substring(1);
@@ -100,8 +100,9 @@ $(document).ready(function() {
                 return;
             }
             else{
-                moved = true;
-                console.log('moved');
+                // figureMoved = !figureMoved;
+                figureMoved = true;
+                console.log('figureMoved');
             }
             var pieceId = String.fromCharCode(parseInt(y) + 96) + x;
             prev.row = parseInt(x);
@@ -116,6 +117,7 @@ $(document).ready(function() {
             moveDone = true;
         }
     });
+    
     $('#black-button').on( "click", function() {
         $('.game-content').css('display', 'flex');
         $('.container').css('display', 'none');
